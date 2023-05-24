@@ -14,7 +14,7 @@ def main():
     parser.add_argument('-f', '--file')
     args = parser.parse_args()
     project_name = config('PROJECT') 
-    if args.operation == 'import':
+    if args.operation == 'export':
         if args.repository == 'gitlab':
             l = gitlab_sdk.get_gitlab_repository_environments()
             df = pd.DataFrame.from_dict(l)
