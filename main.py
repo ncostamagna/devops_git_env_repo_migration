@@ -27,7 +27,6 @@ def main():
         if args.repository == "github":
             github_sdk.import_environment(args.replace, args.file)
 
-    print(args.repository, args.operation, args.file)
 
 if __name__ == "__main__":
     main()
