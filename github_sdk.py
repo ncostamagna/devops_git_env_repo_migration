@@ -28,7 +28,7 @@ def import_environment(replace, file):
     df_check = pd.concat([var_df, sec_df],axis=0)
     df = None
     if df_check.empty == False:
-        df_check = pd.concat([var_df, sec_df],axis=0)[['name', 'env', 'secret']]
+        df_check = df_check[['name', 'env', 'secret']]
         df = df_import.merge(df_check, left_on=['key', 'env', 'secret'], right_on=['name', 'env', 'secret'], suffixes=('_import', '_github'),  how='left', indicator=True)
         df = df.loc[df['_merge'] == 'left_only',['key', 'value', 'env', 'secret']]
     else:

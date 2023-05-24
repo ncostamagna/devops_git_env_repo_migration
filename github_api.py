@@ -10,7 +10,6 @@ __TOKEN = "Bearer " + config('GITHUB_TOKEN')
 __HEADER = {"Content-Type": "application/json; charset=utf-8", 'Authorization': __TOKEN}
 __HOST = "https://api.github.com"
 __ENVS = config("ENVS").split(',')
-__KEY = config("SECRET_KEY")
 
 def get_repository_id(name):
         url = f'{__HOST}/repos/{name}'
