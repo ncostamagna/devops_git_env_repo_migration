@@ -3,7 +3,7 @@ import github_api
 import pandas as pd
 
 
-def import_environment(replace, file):
+def import_environment(file):
     GITHUB_REPO_NAME = config('GITHUB_REPO_NAME')
 
     # data to import

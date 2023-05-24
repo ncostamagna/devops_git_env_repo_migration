@@ -10,7 +10,6 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("repository", choices=['gitlab', 'github'], type = str, help='repository')
     parser.add_argument("operation", choices=['export', 'import'], type = str, help='export or import operation')
-    parser.add_argument('-r', '--replace', action='store_true', help='replace all existing environments')
     parser.add_argument('-f', '--file')
     args = parser.parse_args()
     project_name = config('PROJECT') 
@@ -25,7 +24,7 @@ def main():
             return 
 
         if args.repository == "github":
-            github_sdk.import_environment(args.replace, args.file)
+            github_sdk.import_environment(args.file)
 
 
 if __name__ == "__main__":
