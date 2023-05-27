@@ -30,7 +30,7 @@ GITLAB_PROJECT_ID=   # gitlab project id, for exaple 202
 PROJECT=             # project name, the export file will be created with this name
 GITHUB_TOKEN=        # github token
 GITHUB_REPO_NAME=    # 'owner/repo' for example if your repository is 'https://github.com/ncostamagna/matrix', You'll set 'ncostamagna/matrix' in this environment
-ENVS=                # environments with comma, for example 'qa,prod'
+ENVS=                # environments with comma these environments need to be created in github, for example 'qa,prod'
 ```
 
 ## 'Files' folder
