@@ -3,7 +3,7 @@ import github_sdk
 from decouple import config
 import pandas as pd
 import argparse
-
+import one_pass
 
 def main():
 
@@ -25,6 +25,7 @@ def main():
 
         if args.repository == "github":
             github_sdk.import_environment(args.file)
+            one_pass.generate(args.file)
 
 
 if __name__ == "__main__":
